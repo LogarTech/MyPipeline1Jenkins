@@ -1,6 +1,9 @@
 pipeline {
     agent any
-
+     triggers {
+       cron '''TZ=America/New_York
+        H */1 * * *'''
+       }
     stages {
         stage('Hello') {
             steps {
